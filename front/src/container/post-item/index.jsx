@@ -48,7 +48,7 @@ export default function Container({ id, username, text, date }) {
     text: post.text,
     date: getDate(post.date),
 
-    reply: post.reply.map(({ id, username, text, date }) => ({
+    reply: post.reply.reverse().map(({ id, username, text, date }) => ({
       id,
       username,
       text,
